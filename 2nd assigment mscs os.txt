@@ -1,0 +1,875 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**M_saqlain*\n",
+        "**MTN-22-14162**"
+      ],
+      "metadata": {
+        "id": "8ORi6Gf2gWbl"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Chapter 4**"
+      ],
+      "metadata": {
+        "id": "KI625lWlgYS9"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        " **4-11.**My Pizzas, Your Pizzas: Start with your program from Exercise 4-1. Make a copy of the list of pizzas, and call it friend_pizzas . Then, do the following:  \n",
+        " **Part1**\tAdd a new pizza to the original list . •\tAdd a different pizza to the list friend_pizzas . \n",
+        " **Part2**\tProve that you have two separate lists . Print the message, My favorite pizzas are:, and then use a for loop to print the first list . Print the message, My friend’s favorite pizzas are:, and then use a for loop to print the second list . Make sure each new pizza is stored in the appropriate list ."
+      ],
+      "metadata": {
+        "id": "ir7kQyNpfAoW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 59,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "y_Jw1Arie5oz",
+        "outputId": "5f2e795a-04cf-4fce-c641-329da7228f6d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['supreme', 'fajita', 'bonfire']\n",
+            "['supreme', 'fajita', 'bonfire']\n",
+            "\n",
+            " Modified list : \n",
+            "\n",
+            "['supreme', 'fajita', 'bonfire', 'barbq']\n",
+            "['supreme', 'fajita', 'bonfire', 'jelopeno']\n",
+            "\n",
+            "My favourite pizza are: \n",
+            "\n",
+            "supreme\n",
+            "fajita\n",
+            "bonfire\n",
+            "barbq\n",
+            "\n",
+            "My friend favourite pizza are: \n",
+            "\n",
+            "supreme\n",
+            "fajita\n",
+            "bonfire\n",
+            "jelopeno\n",
+            "\n",
+            "\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Problem 4.11\n",
+        "\n",
+        "pizza_saqlain = ['supreme', 'fajita', 'bonfire']\n",
+        "friend_pizza_saqlain = ['supreme', 'fajita', 'bonfire']\n",
+        "print(pizza_saqlain)\n",
+        "print(friend_pizza_saqlain)\n",
+        "\n",
+        "#1st Part\n",
+        "pizza_saqlain.append(\"barbq\")\n",
+        "friend_pizza_saqlain.append(\"jelopeno\")\n",
+        "print(\"\\n Modified list : \\n\")\n",
+        "print(pizza_saqlain)\n",
+        "print(friend_pizza_saqlain)\n",
+        "\n",
+        "#2nd Part\n",
+        "print(\"\\nMy favourite pizza are: \\n\")\n",
+        "for pizza in pizza_saqlain:\n",
+        "    print(pizza)\n",
+        "print(\"\\nMy friend favourite pizza are: \\n\")\n",
+        "for friend_pizza in friend_pizza_saqlain:\n",
+        "    print(friend_pizza )\n",
+        "print(\"\\n\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**4-13**. Buffet: A buffet-style restaurant offers only five basic foods . Think of five simple foods, and store them in a tuple . \n",
+        "**Part1**\tUse a for loop to print each food the restaurant offers . \n",
+        "**Part2**\tTry to modify one of the items, and make sure that Python rejects the change .\n",
+        "**Part3**\tThe restaurant changes its menu, replacing two of the items with different foods . Add a block of code that rewrites the tuple, and then use a for loop to print each of the items on the revised menu ."
+      ],
+      "metadata": {
+        "id": "7gm1up9Fj5qw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Problem 4.13\n",
+        "food_saqlain = ('rice','chowmein','chicken','soup','custrad')\n",
+        "\n",
+        "#1st Part\n",
+        "for food in food_saqlain:\n",
+        "    print(food)\n",
+        "\n",
+        "#2nd Part \n",
+        "\n",
+        "#food_saqlain[0] = ('Biryani')  \n",
+        "#'tuple' object does not support item modifictaion\n",
+        "\n",
+        "#3rd Part  \n",
+        "food_saqlain = ('rice','chowmein','chicken','cake','fish')\n",
+        "print(\"\\nThis is new menu of our restaurant:\\n\")\n",
+        "for food in food_saqlain:\n",
+        "    print(food) \n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pqIriDmIkCHv",
+        "outputId": "e463db87-3625-46d8-89df-37dd23123bbf"
+      },
+      "execution_count": 60,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "rice\n",
+            "chowmein\n",
+            "chicken\n",
+            "soup\n",
+            "custrad\n",
+            "\n",
+            "This is new menu of our restaurant:\n",
+            "\n",
+            "rice\n",
+            "chowmein\n",
+            "chicken\n",
+            "cake\n",
+            "fish\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Chapter 5**"
+      ],
+      "metadata": {
+        "id": "6p8t4l-tptQr"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**5.2**More Conditional Tests: You don’t have to limit the number of tests you create to 10 . If you want to try more comparisons, write more tests and add them to conditional_tests.py . Have at least one True and one False result for each of the following: \n",
+        "**Part1**\tTests for equality and inequality with strings \n",
+        "**Part2**\tTests using the lower() function \n",
+        "**Part3**\tNumerical tests involving equality and inequality, greater than and less than, greater than or equal to, and less than or equal to \n",
+        "**Part4**\tTests using the and keyword and the or keyword\n",
+        "**Part5**\tTest whether an item is in a list \n",
+        "**Part6**\tTest whether an item is not in a list"
+      ],
+      "metadata": {
+        "id": "nUfndFGhps57"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Problem 5.2\n",
+        "#1st Part\n",
+        "#equality and inequality with strings\n",
+        "name_saqlain = 'saqlain' \n",
+        "name_saqlain == 'saqlain' "
+      ],
+      "metadata": {
+        "id": "Wfq-FNneqNvt",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2a12f5ba-069a-4a24-97f4-dcdd641ff303"
+      },
+      "execution_count": 62,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 62
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#equality and inequality with strings\n",
+        "name_saqlain = 'sidra' \n",
+        "name_saqlain == 'saqlain' "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nIG9XTgCYkbi",
+        "outputId": "2e7c01a5-0012-4d44-a3f8-c98134cc15cc"
+      },
+      "execution_count": 65,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 65
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2nd Part\n",
+        "#using the lower() function\n",
+        "name_saqlain = 'saqlain' \n",
+        "name_saqlain == 'saqlain' "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WWCXc7WaYoqS",
+        "outputId": "2b17ec6b-8cca-42bf-eb96-b48bd97a9deb"
+      },
+      "execution_count": 68,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 68
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "name_saqlain = 'saqlain' \n",
+        "name_saqlain.lower() == 'saqlain' "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fF9ILJgUY4xM",
+        "outputId": "a3d5939d-ff57-4c2a-80e5-c40afb75b8b9"
+      },
+      "execution_count": 69,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 69
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#3rd Part\n",
+        "#Numerical tests involving equality \n",
+        "marks_saqlain=22\n",
+        "marks_saqlain==25"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_-bL0bkAZUSC",
+        "outputId": "3ce7a74e-b3e1-4a69-949f-b8f430336d62"
+      },
+      "execution_count": 70,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 70
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#inequality\n",
+        "marks_saqlain=22\n",
+        "marks_saqlain!=20"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MlnuvSbSZbgC",
+        "outputId": "eae24f2f-6a77-45f1-d325-5ccf2adc3dd9"
+      },
+      "execution_count": 72,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 72
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#less than or equal to\n",
+        "marks_saqlain=22\n",
+        "marks_saqlain<=18"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LRH5f69vaIOk",
+        "outputId": "0372c9e2-160d-4cb7-b6fc-453a8d209ab2"
+      },
+      "execution_count": 73,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 73
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#greater than or equal to\n",
+        "marks_saqlain=22\n",
+        "marks_saqlain>=18"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e9ZjExwWaTIb",
+        "outputId": "9b8417a8-62da-4b76-e82c-c3a1431039e6"
+      },
+      "execution_count": 74,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 74
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#greater than\n",
+        "marks_saqlain>25"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uMXGooihgNtc",
+        "outputId": "5bfa6b5e-35bd-43d5-d4c3-02a2c41d1642"
+      },
+      "execution_count": 75,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 75
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#less than\n",
+        "marks_saqlain<25"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EHwJmleigSCH",
+        "outputId": "e569e930-9e17-4db4-d2d0-df544ad81b1f"
+      },
+      "execution_count": 76,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 76
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4th Part\n",
+        "#using the and keyword\n",
+        "marks_saqlain =22\n",
+        "marks_saqlain>=25 and marks_saqlain<=25"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VID1lk1agYjz",
+        "outputId": "096fc941-ad8a-4810-a858-85164c02441b"
+      },
+      "execution_count": 78,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 78
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#using the or keyword\n",
+        "marks_saqlain =22\n",
+        "marks_saqlain>=25 or marks_saqlain<=25\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FaERnK2IgoJc",
+        "outputId": "0ccfa78b-1e65-4d92-f341-f2fb31c36218"
+      },
+      "execution_count": 79,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 79
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5th Part\n",
+        "#whether an item is in a list\n",
+        "marks_saqlain=[18,22,30,45,55,40]\n",
+        "22 in marks_saqlain"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lyPizSrXhsLO",
+        "outputId": "fe50e35d-6dd7-451e-8ea8-17aa320d60ca"
+      },
+      "execution_count": 80,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 80
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "50 in marks_saqlain"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "F5kYSrVFhxbV",
+        "outputId": "e0da6343-f0fa-47e8-aeb8-42abcf047933"
+      },
+      "execution_count": 81,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 81
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#6th Part\n",
+        "#whether an item is not in a list\n",
+        "88 not in marks_saqlain"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HZ3aXCWrh7R3",
+        "outputId": "8b10693b-41fa-4ea8-f8f5-288b4c288ee6"
+      },
+      "execution_count": 82,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 82
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "40 not in marks_saqlain"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QQZfrVSciCkv",
+        "outputId": "5f856ab8-91c4-4d4a-a6f3-5224b55381a1"
+      },
+      "execution_count": 83,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 83
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Chapter 6**"
+      ],
+      "metadata": {
+        "id": "m7XRe7OfrBlS"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**6-3**. Glossary: A Python dictionary can be used to model an actual dictionary . However, to avoid confusion, let’s call it a glossary . \n",
+        "**Part1**\tThink of five programming words you’ve learned about in the previous chapters . Use these words as the keys in your glossary, and store their meanings as values . \n",
+        "**Part2**\tPrint each word and its meaning as neatly formatted output . You might print the word followed by a colon and then its meaning, or print the word on one line and then print its meaning indented on a second line . Use the newline character (\\n) to insert a blank line between each word-meaning pair in your output .\n"
+      ],
+      "metadata": {
+        "id": "NPr-TFIhrG_Z"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Problem 6.3\n",
+        "#1st Part\n",
+        "glossary_saqlain={'append':'Adds new element to the end of the list',\n",
+        "          'del':'Removes an item from any position in a list ',\n",
+        "          'pop':'Removes the last item in a list.',\n",
+        "          'list':'A collection of items in a particular order.',\n",
+        "          'dictionary':\"A collection of key-value pairs.\",}\n",
+        "#2nd Part\n",
+        "for key, value in glossary_saqlain.items(): \n",
+        "    print(key.title() + \":\") \n",
+        "    print(value + \"\\n\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "u0Vx3rtNix1M",
+        "outputId": "a2c14f8c-6a5f-4cb3-ecf2-78eaa86d126d"
+      },
+      "execution_count": 61,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Append:\n",
+            "Adds new element to the end of the list\n",
+            "\n",
+            "Del:\n",
+            "Removes an item from any position in a list \n",
+            "\n",
+            "Pop:\n",
+            "Removes the last item in a list.\n",
+            "\n",
+            "List:\n",
+            "A collection of items in a particular order.\n",
+            "\n",
+            "Dictionary:\n",
+            "A collection of key-value pairs.\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**6-11**. **Cities:** Make a dictionary called cities . Use the names of three cities as keys in your dictionary . Create a dictionary of information about each city and include the country that the city is in, its approximate population, and one fact about that city . The keys for each city’s dictionary should be something like country, population, and fact . Print the name of each city and all of the information you have stored about it . "
+      ],
+      "metadata": {
+        "id": "aDQrfjHArX5s"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Problem 6.11\n",
+        "cities_saqlain = {\n",
+        "    'multan': {\n",
+        "        'country': 'pakistan',\n",
+        "        'province': 'punjab',\n",
+        "        'speciality': 'sufi shrines',\n",
+        "        },\n",
+        "    'karachi': {\n",
+        "        'country': 'pakistan',\n",
+        "        'province': 'sindh',\n",
+        "        'speciality': 'arabian sea',\n",
+        "        },\n",
+        "    'swat': {\n",
+        "        'country': 'pakistan',\n",
+        "        'province': 'khyber pakhtunkhwa',\n",
+        "        'speciality': 'natural beauty',\n",
+        "        }\n",
+        "    }\n",
+        "for city_name, cities_info in cities_saqlain.items():\n",
+        "   print(\"\\nCity: \" + city_name.title()) \n",
+        "   country = cities_info['country'] \n",
+        "   province = cities_info['province']   \n",
+        "   speciality = cities_info['speciality']\n",
+        "   print(\"It is in \" + country.title() + \" located in province \" + province.title())    \n",
+        "   print(\"It is famous for its \" + speciality.title())\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "h7FA_2R9rQpW",
+        "outputId": "698dbb29-8da6-436a-e9b6-281af61ff04e"
+      },
+      "execution_count": 41,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "City: Multan\n",
+            "It is in Pakistan located in province Punjab\n",
+            "It is famous for its Sufi Shrines\n",
+            "\n",
+            "City: Karachi\n",
+            "It is in Pakistan located in province Sindh\n",
+            "It is famous for its Arabian Sea,\n",
+            "\n",
+            "City: Swat\n",
+            "It is in Pakistan located in province Khyber Pakhtunkhwa\n",
+            "It is famous for its Natural Beauty\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**6-12**. Extensions: We’re now working with examples that are complex enough that they can be extended in any number of ways . Use one of the example programs from this chapter, and extend it by adding new keys and values, changing the context of the program or improving the formatting of the output . "
+      ],
+      "metadata": {
+        "id": "ZYjsRGK-riDF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Problem 6.12\n",
+        "cities_saqlain = {\n",
+        "    'multan': {\n",
+        "        'country': 'pakistan',\n",
+        "        'province': 'punjab',\n",
+        "        'speciality': 'sufi shrines',\n",
+        "        },\n",
+        "    'karachi': {\n",
+        "        'country': 'pakistan',\n",
+        "        'province': 'sindh',\n",
+        "        'speciality': 'arabian sea',\n",
+        "        }\n",
+        "    }\n",
+        "print(cities_saqlain)\n",
+        "for city_name, cities_info in cities_saqlain.items():\n",
+        "   print(\"\\nCity: \" + city_name.title()) \n",
+        "   country = cities_info['country'] \n",
+        "   province = cities_info['province']   \n",
+        "   speciality = cities_info['speciality']\n",
+        "   print(\"It is in \" + country.title() + \" located in province \" + province.title())    \n",
+        "   print(\"It is famous for its \" + speciality.title())\n",
+        "\n",
+        "# added new key and values in my example\n",
+        "print(\"\\nAfter Adding new keys and values\\n\")    \n",
+        "cities_saqlain['lahore']={\n",
+        "        'country': 'pakistan',\n",
+        "        'province': 'punjab',\n",
+        "        'speciality': 'heart of pakistan',\n",
+        "        }\n",
+        "\n",
+        "print(cities_saqlain)\n",
+        "for city_name, cities_info in cities_saqlain.items():\n",
+        "   print(\"\\nCity: \" + city_name.title()) \n",
+        "   country = cities_info['country'] \n",
+        "   province = cities_info['province']   \n",
+        "   speciality = cities_info['speciality']\n",
+        "   print(\"It is in \" + country.title() + \" located in province \" + province.title())    \n",
+        "   print(\"It is famous for its \" + speciality.title())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BBJQCsdlxF5V",
+        "outputId": "26568a07-9c1f-4747-da42-d3d1288c8b21"
+      },
+      "execution_count": 89,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'multan': {'country': 'pakistan', 'province': 'punjab', 'speciality': 'sufi shrines'}, 'karachi': {'country': 'pakistan', 'province': 'sindh', 'speciality': 'arabian sea'}}\n",
+            "\n",
+            "City: Multan\n",
+            "It is in Pakistan located in province Punjab\n",
+            "It is famous for its Sufi Shrines\n",
+            "\n",
+            "City: Karachi\n",
+            "It is in Pakistan located in province Sindh\n",
+            "It is famous for its Arabian Sea\n",
+            "\n",
+            "After Adding new keys and values\n",
+            "\n",
+            "{'multan': {'country': 'pakistan', 'province': 'punjab', 'speciality': 'sufi shrines'}, 'karachi': {'country': 'pakistan', 'province': 'sindh', 'speciality': 'arabian sea'}, 'lahore': {'country': 'pakistan', 'province': 'punjab', 'speciality': 'heart of pakistan'}}\n",
+            "\n",
+            "City: Multan\n",
+            "It is in Pakistan located in province Punjab\n",
+            "It is famous for its Sufi Shrines\n",
+            "\n",
+            "City: Karachi\n",
+            "It is in Pakistan located in province Sindh\n",
+            "It is famous for its Arabian Sea\n",
+            "\n",
+            "City: Lahore\n",
+            "It is in Pakistan located in province Punjab\n",
+            "It is famous for its Heart Of Pakistan\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
